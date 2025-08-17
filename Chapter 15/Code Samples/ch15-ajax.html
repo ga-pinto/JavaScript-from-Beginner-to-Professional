@@ -9,7 +9,7 @@
       function call() {
         let xhttp = new XMLHttpRequest();
         let url = "some valid url";
-        xhttp.load = function () {
+        xhttp.onload = function () {
           if (this.status == 200 && this.readyState == 4) {
             document.getElementById("content").innerHTML = this.responseText;
           }
